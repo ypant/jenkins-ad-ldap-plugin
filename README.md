@@ -18,7 +18,11 @@ Groups: OU=Users,OU=My Org,DC=mydomain,DC=example,DC=com
 Here is the LDAP plugin configuration settings that worked for us:
 
 Server: ldap://myldap.mydomain.example.com:3268  (3268 for AD global catalog)
+
 root DN: DC=mydomain,DC=example,DC=com
+
 User search filter: sAMAccountName={0}
+
 Group membership: Parse user attribute for list of groups, select attribute: memberOf
+
 Manager DN: CN=admin,OU=Users,OU=My Org,DC=mydomain,DC=example,DC=com
